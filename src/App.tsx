@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import { MainLayout } from './Layout/MainLayout';
 
 const App: FC = () => {
-  return <div>13123</div>;
+  return <MainLayout />;
 };
 
 export default App;
