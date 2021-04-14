@@ -16,6 +16,7 @@ export const LoginPageFormContainerUI = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  position: relative;
 
   & h3 {
     font-size: 18px;
@@ -29,4 +30,10 @@ export const LogoPageControlPanelUI = styled.div`
   flex-direction: column;
   gap: 13px;
   padding-bottom: 30px;
+`;
+
+export const LoginGoBackUI = styled.div`
+  position: absolute;
+  top: 60px;
+  left: -20px;
 `;
