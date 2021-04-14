@@ -6,6 +6,7 @@ import { routerPath } from './routerPath';
 import { NewsPage } from '../Pages/NewsPage';
 import { AboutPage } from '../Pages/AboutPage';
 import { ThemesPage } from '../Pages/ThemesPage';
+import { LoginPage } from '../Pages/LoginPage';
 
 export const useRouter = (isAuth: boolean): ReactElement => {
   if (!isAuth) {
@@ -22,6 +23,7 @@ export const useRouter = (isAuth: boolean): ReactElement => {
       <Route path={routerPath.home} exact component={withLayout(HomePage)} />
       <Route path={routerPath.news} exact component={withLayout(NewsPage)} />
       <Route path={routerPath.about} exact component={withLayout(AboutPage)} />
+      <Route path={routerPath.login} exact component={LoginPage} />
       <Route
         path={routerPath.themes}
         exact

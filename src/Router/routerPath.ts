@@ -3,4 +3,5 @@ export const routerPath = {
   about: '/about',
   news: '/news',
   themes: '/themes',
+  login: '/login',
 };

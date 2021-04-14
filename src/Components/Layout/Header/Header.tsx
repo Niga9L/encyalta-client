@@ -4,6 +4,8 @@ import { Logo } from '../Logo';
 import { Search } from '../../Search';
 import { Button } from '../../UI/Button';
 import { Notification } from '../../UI/Notification';
+import { NavLink } from 'react-router-dom';
+import { routerPath } from '../../../Router/routerPath';
 
 export const Header: FC = () => {
   return (
@@ -16,7 +18,9 @@ export const Header: FC = () => {
       </HeaderPartUI>
       <HeaderPartUI>
         <Notification count={5} />
-        <Button text={'Войти'} />
+        <NavLink to={routerPath.login}>
+          <Button text={'Войти'} />
+        </NavLink>
       </HeaderPartUI>
     </HeaderUI>
   );

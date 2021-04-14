@@ -2,9 +2,15 @@ import React, { FC } from 'react';
 import { ButtonUI } from './styled';
 import { ButtonPropsType } from './types';
 
-export const Button: FC<ButtonPropsType> = ({ text, size = 'middle' }) => {
+export const Button: FC<ButtonPropsType> = ({
+  text,
+  size = 'middle',
+  type = 'primary',
+  onClick,
+  loading,
+}) => {
   return (
-    <ButtonUI type={'primary'} size={size}>
+    <ButtonUI loading={loading} type={type} size={size} onClick={onClick}>
       {text}
     </ButtonUI>
   );
