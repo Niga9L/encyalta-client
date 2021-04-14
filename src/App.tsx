@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-import { MainLayout } from './Layout/MainLayout';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useRouter } from './Router';
 
 const App: FC = () => {
-  return <MainLayout />;
+  const router = useRouter(true);
+  return <Router>{router}</Router>;
 };
 
 export default App;

@@ -6,7 +6,7 @@ export const LayoutUI = styled(Layout)`
 `;
 
 export const PageUI = styled(Layout)`
-  margin: 64px auto 0;
+  margin: 64px auto 30px;
   width: 100%;
   max-width: 1480px;
 `;
