@@ -1,16 +1,20 @@
 import React, { FC, useMemo } from 'react';
 import { InputUI } from './styled';
 import { InputPropsType } from './types';
-import { Input as InputAnt } from 'antd';
+import { Input as InputAnt, InputProps } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
-export const Input: FC<InputPropsType> = ({ label, type, placeholder }) => {
+export const Input: FC<InputPropsType & InputProps> = ({
+  label,
+  type,
+  ...props
+}) => {
   const inputWithType = useMemo(() => {
     switch (type) {
       case 'password': {
         return (
           <InputAnt.Password
-            placeholder={placeholder}
+            {...props}
             iconRender={(visible) =>
               visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
             }
@@ -18,9 +22,9 @@ export const Input: FC<InputPropsType> = ({ label, type, placeholder }) => {
         );
       }
       default:
-        return <InputAnt placeholder={placeholder} />;
+        return <InputAnt {...props} />;
     }
-  }, [type]);
+  }, [type, props]);
 
   return (
     <InputUI>
